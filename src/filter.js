@@ -4,3 +4,6 @@
 //3.Recuperar subtipo de filtragem (ovo: 2,5,10km?)
 //4.Filtrar categoria
 //5.Filtrar subcategoria
+
+import data from './data/pokemon/pokemon.js';
+console.log(data)

@@ -1,6 +1,5 @@
-import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
-import pokemon from './data/pokemon/pokemon.js';
+
 
 
 //Variáveis globais: configuração

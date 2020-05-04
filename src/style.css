@@ -88,12 +88,6 @@ Classes das cores por tipo do pokemon .color-aco {
     font-size: 22px;
 }
 
-input {
-    border: none;
-    outline: none;
-    background-color: transparent;
-}
-
 .body-config {
     margin: 0px auto;
     background-color: #E5E5E5;
@@ -140,13 +134,6 @@ input {
 .btn-search input {
     width: 200px;
     margin-left: 5px;
-}
-
-.select {
-    outline: none;
-    border: none;
-    background-color: transparent;
-    width: 170px;
 }
 
 .btn-menu:hover,
