@@ -5,21 +5,21 @@ import pokemon from './data/pokemon/pokemon.js';
 
 //Variáveis globais: configuração
 const colorTypeList = {
-    Fire: "#FF8C00",
-    Ice: "#DBDDDD",
-    Flying: "#0E8AA5",
-    Psychic: "#D91CD1",
-    Grass: "#59B539",
-    Fighting: "#FEC807",
-    Ground: "#976B36",
-    Steel: "#DAA520",
     Bug: "#1E6DE3",
-    Ghost: "#F6D7F6",
     Dark: "#000000",
     Electric: "#D7DB1E",
-    Rock: "#484848",
-    Poison: "#9D9F25",
+    Fire: "#FF8C00",
+    Fighting: "#FEC807",
+    Flying: "#0E8AA5",
+    Ghost: "#F6D7F6",
+    Grass: "#59B539",
+    Ground: "#976B36",
+    Ice: "#DBDDDD",
     Normal: "#DE2626",
+    Poison: "#9D9F25",
+    Psychic: "#D91CD1",
+    Rock: "#484848",
+    Steel: "#DAA520",
     Water: "#87CEEB",
 };
 
