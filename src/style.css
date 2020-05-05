@@ -90,10 +90,18 @@
     background-color: red;
 }
 
+<<<<<<< HEAD
 .subnav:hover .subnav-content {
     display: block;
 }
 
+=======
+.body-config {
+    margin: 0px auto;
+    background-color: #E5E5E5;
+    font-size: 22px;
+}
+>>>>>>> 71a93fbbb7511e052f8e6bc0580898e2ec5887bd
 
 /*Formatações de bloco*/
 
@@ -113,6 +121,39 @@
     margin: 3px 3px 3px 0px;
 }
 
+<<<<<<< HEAD
+=======
+.btn-card-double {
+    width: 150px;
+}
+
+.btn-menu {
+    padding: 10px;
+    width: 200px;
+}
+
+.btn-filter {
+    padding: 0px 10px 0px 0px;
+}
+
+.btn-search {
+    padding: 5px;
+}
+
+.btn-search input {
+    width: 200px;
+    margin-left: 5px;
+}
+
+.btn-menu:hover,
+.btn-search:hover,
+.select:hover {
+    cursor: pointer;
+    background-color: #FFFFFF;
+    opacity: 1;
+}
+
+>>>>>>> 71a93fbbb7511e052f8e6bc0580898e2ec5887bd
 .container {
     background-color: #E5E5E5;
     margin: 0px auto;
