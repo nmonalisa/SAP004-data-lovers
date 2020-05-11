@@ -1,7 +1,10 @@
-import { example } from './data.js';
 import data from './data/pokemon/pokemon.js';
+<<<<<<< HEAD
 import pokemon from './data/pokemon/pokemon.js';
 console.log(data)
+=======
+
+>>>>>>> b2b382e597c554a6d20fc1b6e212925447f376a9
 
 
 //Variáveis globais: configuração
@@ -9,8 +12,13 @@ const colorTypeList = {
     Bug: "#1E6DE3",
     Dark: "#000000",
     Electric: "#D7DB1E",
+<<<<<<< HEAD
     Fighting: "#FEC807",
     Fire: "#FF8C00",
+=======
+    Fire: "#FF8C00",
+    Fighting: "#FEC807",
+>>>>>>> b2b382e597c554a6d20fc1b6e212925447f376a9
     Flying: "#0E8AA5",
     Ghost: "#F6D7F6",
     Grass: "#59B539",

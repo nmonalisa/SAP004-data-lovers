@@ -1,108 +1,109 @@
-Classes das cores por tipo do pokemon .color-aco {
-    background-color: #DAA520;
-}
-
-.color-agua {
-    background-color: #87CEEB;
-}
-
-.color-dragao {
-    background-color: #DB3E1B;
-}
-
-.color-eletrico {
-    background-color: #D7DB1E;
-}
-
-.color-fada {
-    background-color: #D91CD1;
-}
-
-.color-fantasma {
-    background-color: #F6D7F6;
-}
-
-.color-fogo {
-    background-color: #FF8C00;
-}
-
-.color-gelo {
-    background-color: #DBDDDD;
-}
-
-.color-inseto {
-    background-color: #1E6DE3;
-}
-
-.color-lutador {
-    background-color: #FEC807;
-}
-
-.color-normal {
-    background-color: #DE2626;
-}
-
-.color-noturno {
-    background-color: #000000;
-}
-
-.color-planta {
-    background-color: #59B539;
-}
-
-.color-pedra {
-    background-color: #484848;
-}
-
-.color-psiquico {
-    background-color: #D91CD1;
-}
-
-.color-venenoso {
-    background-color: #9D9F25;
-}
-
-.color-voador {
-    background-color: #0E8AA5;
-}
-
-.color-terra {
-    background-color: #976B36;
-}
-
-
-/*Demais estilizações*/
-
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-#home:hover,
-#logo-lab {
-    cursor: pointer;
-}
 
-.font-22 {
-    font-size: 22px;
-}
+/*Classes de formatação geral*/
 
-input {
-    border: none;
-    outline: none;
-    background-color: transparent;
+.header-body {
+    margin-bottom: 50px;
+    background-color: #28A992;
 }
 
 .body-config {
     margin: 0px auto;
     background-color: #E5E5E5;
-    font-size: 22px;
 }
 
 .bold {
     font-weight: bold;
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.in-block {
+    display: inline-block;
+}
+
+
+/*Formatação do cabeçalho*/
+
+.navbar {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.subnav {
+    float: left;
+    overflow: hidden;
+}
+
+.navbar a {
+    font-size: 1.2em;
+    float: left;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.subnav .subnavbtn,
+.subnav-select {
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 15px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.subnav:hover .subnav-content select:hover {
+    background-color: lightgray;
+    color: black;
+}
+
+.subnav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: red;
+    width: 100%;
+    z-index: 1;
+}
+
+.navbar a:hover,
+.subnav:hover .subnavbtn {
+    background-color: red;
+}
+
+<<<<<<< HEAD
+.subnav:hover .subnav-content {
+    display: block;
+}
+
+=======
+.body-config {
+    margin: 0px auto;
+    background-color: #E5E5E5;
+    font-size: 22px;
+}
+>>>>>>> 71a93fbbb7511e052f8e6bc0580898e2ec5887bd
+
+/*Formatações de bloco*/
 
 .btn {
     background: #FFFFFF;
@@ -120,6 +121,8 @@ input {
     margin: 3px 3px 3px 0px;
 }
 
+<<<<<<< HEAD
+=======
 .btn-card-double {
     width: 150px;
 }
@@ -142,13 +145,6 @@ input {
     margin-left: 5px;
 }
 
-.select {
-    outline: none;
-    border: none;
-    background-color: transparent;
-    width: 170px;
-}
-
 .btn-menu:hover,
 .btn-search:hover,
 .select:hover {
@@ -157,12 +153,17 @@ input {
     opacity: 1;
 }
 
+>>>>>>> 71a93fbbb7511e052f8e6bc0580898e2ec5887bd
 .container {
     background-color: #E5E5E5;
     margin: 0px auto;
     padding-bottom: 30px;
+<<<<<<< HEAD
     >width: 1200px;
     font-family: sans-serif;
+=======
+    width: 1200px;
+>>>>>>> b2b382e597c554a6d20fc1b6e212925447f376a9
 }
 
 .container-card {
@@ -184,60 +185,13 @@ input {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100%;
-    flex-shrink: 1;
 }
 
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
+
+/*Formatações específicas*/
 
 .flex-pok-type {
     justify-content: flex-start;
-}
-
-.inner-header {
-    margin: auto;
-    max-width: 1200px;
-}
-
-.header {
-    padding: 10px 50px;
-    height: 70px;
-    margin-bottom: 30px;
-    background: rgba(40, 169, 146, 0.94);
-}
-
-.in-block {
-    display: inline-block;
-}
-
-.logo-align {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0px;
-}
-
-.logo-item1 {
-    width: 110px;
-    height: 30px;
-}
-
-.logo-item2 {
-    width: 30px;
-    height: 30px;
-    margin-left: 45px;
-}
-
-.number-pok {
-    margin-top: 5px 0px;
-    font-size: 14px;
-    float: right;
-    padding-top: 6px;
-    margin-right: 5px;
 }
 
 .img-pok {
@@ -264,13 +218,6 @@ input {
     height: 30px;
 }
 
-.bg-img-pok {
-    float: right;
-    opacity: 0.3;
-    width: 50px;
-    height: 100px;
-}
-
 .footer-page {
     display: flex;
     justify-content: center;
@@ -278,6 +225,7 @@ input {
     font-size: 16px;
     color: white;
     padding: 5px;
+    background-color: black;
 }
 
 .footer-page img {
@@ -285,4 +233,12 @@ input {
     height: 25px;
     border-radius: 4px;
     margin-right: 8px;
+}
+
+.number-pok {
+    margin-top: 5px 0px;
+    font-size: 14px;
+    float: right;
+    padding-top: 6px;
+    margin-right: 5px;
 }

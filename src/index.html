@@ -11,18 +11,66 @@
 <body class="body-config">
     <div id="root">
         <!--cabeçalho da pagina-->
+<<<<<<< HEAD
+        <header class="header-body">
+
+            <!-- container menu -->
+            <nav class="navbar">
+                <!-- item home-->
+                <a href="index.html">Home</a>
+
+                <!-- item filter-->
+                <div class="subnav">
+                    <button class="subnavbtn"> Filtrar </button>
+                    <!-- subitem-->
+                    <div class="subnav-content">
+                        <!-- tiṕo-->
+                        <select class="subnav-select">
+                            <option value="0">Bug</option>
+                            <option value="1">Dark</option>
+                            <option value="2">Electric</option>
+                            <option value="3">Fire</option>
+                            <option value="4">Fighting</option>
+                            <option value="5">Flying</option>
+                            <option value="6">Ghost</option>
+                            <option value="7">Grass</option>
+                            <option value="8">Ground</option>
+                            <option value="9">Ice</option>
+                            <option value="10">Normal</option>
+                            <option value="11">Poison</option>
+                            <option value="12">Psychic</option>
+                            <option value="13">Rock</option>
+                            <option value="14">Steel</option>
+                            <option value="15">Water</option>
+                         </select>
+                        <!-- ovos-->
+                        <select class="subnav-select">
+                            <option value="0">Ovos</option>                    
+                        </select>
+                        <!-- fraquezas-->
+                        <select class="subnav-select">
+                            <option value="0">Fraquezas</option>
+                         </select>
+                        <!-- comuns e raros-->
+                        <select class="subnav-select">
+                            <option value="0">Taxa de aparecimento</option>                          
+                         </select>
+                    </div>
+                </div>
+=======
         <header class="header">
             <div class="inner-header">
-
                 <!-- logotipo -->
                 <figure id="home" class="logo-align">
                     <img class="logo-item2" src="/assets/pokeball2.png">
                     <img class="logo-item1" src="/assets/pokemon-logo.png">
                 </figure>
 
-                <!-- botões -->
-                <div class="flex">
+                <!-- menu -->
+                <nav class="flex">
+
                     <!-- Filter -->
+<<<<<<< HEAD
                     <form class="flex btn btn-menu btn-filter">
                         <img class="img-btn-filter" src="/assets/filter.png">
                         <select class="select font-22">
@@ -57,52 +105,74 @@
                             <option value="">Maior nº</option>
                             <option value="">A - Z</option>
                             <option value="">Z - A</option>
+=======
+
+                    <div class="flex btn btn-menu btn-filter font-22">
+                        <img class="img-btn-filter" src="/assets/filter.png"> Filtrar
+                    </div>
+
+>>>>>>> 71a93fbbb7511e052f8e6bc0580898e2ec5887bd
+
+                <!-- item order-->
+                <div class="subnav">
+                    <button class="subnavbtn"> Ordenar </button>
+                    <!-- subitem-->
+                    <div class="subnav-content">
+                        <select class="subnav-select">
+                            <option value="0">Opção</option>                    
+>>>>>>> b2b382e597c554a6d20fc1b6e212925447f376a9
                         </select>
+<<<<<<< HEAD
+                    </div>
+                </div>
+                <!-- fim menu-->
+            </nav>
+        </header>
+        <!--//fim cabeçalho-->
+=======
                     </form>
 
                     <!-- search -->
-
                     <div class="flex btn btn-search">
                         <img class="img-btn-search" src="/assets/search.png">
                         <input class="font-22" type="text" placeholder="Pesquisar">
                     </div>
-
-
-                </div>
+                </nav>
             </div>
     </div>
     </header>
     <!--//fim cabeçalho-->
+>>>>>>> 71a93fbbb7511e052f8e6bc0580898e2ec5887bd
 
-    <!-- Container principal-->
-    <div class="container">
-        <!-- tela de cards-->
-        <main class="container-deck">
+        <!-- Container principal-->
+        <div class="container">
+            <!-- tela de cards-->
+            <main class="container-deck">
 
-            <!--template do card-->
-            <section class="container-card">
-                <header>
-                    <h4 class="name-pok in-block name-pok-spacing">Nome</h4>
-                    <div class="number-pok bold">#000</div>
-                </header>
-                <aside class="flex-pok-type flex">
-                    <div class="type-pok btn btn-card bold">Tipo
-                    </div>
-                </aside>
-                <figure>
-                    <img class="img-pok">
+                <!--template do card-->
+                <section class="container-card">
+                    <header>
+                        <h4 class="name-pok in-block name-pok-spacing">Nome</h4>
+                        <div class="number-pok bold">#000</div>
+                    </header>
+                    <aside class="flex-pok-type flex">
+                        <div class="type-pok btn btn-card bold">Tipo
+                        </div>
+                    </aside>
+                    <figure>
+                        <img class="img-pok">
 
-                </figure>
-            </section>
-            <!-- //fim template do card-->
-        </main>
-        <!--//fim tela de cards-->
-    </div>
-    <!-- //fim container-->
-    <footer class="footer-page color-noturno">
-        <img id="logo-lab" src="/assets/laboratoria_logo.png">
-        <span> Laboratoria - SAP004 | São Paulo, 2020</span>
-    </footer>
+                    </figure>
+                </section>
+                <!-- //fim template do card-->
+            </main>
+            <!--//fim tela de cards-->
+        </div>
+        <!-- //fim container-->
+        <footer class="footer-page color-noturno">
+            <img id="logo-lab" class="cursor-pointer" src="/assets/laboratoria_logo.png">
+            <span> Laboratoria - SAP004 | São Paulo, 2020</span>
+        </footer>
     </div>
     <script src="main.js" type="module"></script>
 </body>
