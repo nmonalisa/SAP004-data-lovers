@@ -7,6 +7,7 @@ console.log(data)
 >>>>>>> b2b382e597c554a6d20fc1b6e212925447f376a9
 
 
+
 //Variáveis globais: configuração
 const colorTypeList = {
     Bug: "#1E6DE3",
@@ -35,32 +36,32 @@ const colorTypeList = {
 const cloneCards = () => document.querySelector('.container-deck').appendChild(document.querySelector('.container-card').cloneNode(true));
 
 const setInfosOnCard = (node, index, data, attribute) => {
-    let parentNode = document.querySelectorAll(node)[index]
-    parentNode.textContent = data[index][attribute];
+		let parentNode = document.querySelectorAll(node)[index]
+		parentNode.textContent = data[index][attribute];
 
-    //Tratando as exceções nas informações
-    const fixInfosDetails = () => {
-        switch (attribute) {
-            case 'name':
-                if (data[index][attribute] === "Nidoran ♀ (Female)") {
-                    parentNode.textContent = 'Nidoran ♀';
-                }
-                if (data[index][attribute] === "Nidoran ♂ (Male)") {
-                    parentNode.textContent = 'Nidoran ♂';
-                }
-                break;
-            case 'img':
-                parentNode.src = data[index][attribute];
-                break;
-            case 'type':
-                parentNode.style.width = "150px";
-                if (data[index][attribute].length > 1) {
-                    parentNode.textContent = `${data[index][attribute][0]} - ${data[index][attribute][1]}`;
-                }
-                break;
-        }
-    }
-    fixInfosDetails();
+		//Tratando as exceções nas informações
+		const fixInfosDetails = () => {
+				switch (attribute) {
+						case 'name':
+								if (data[index][attribute] === "Nidoran ♀ (Female)") {
+										parentNode.textContent = 'Nidoran ♀';
+								}
+								if (data[index][attribute] === "Nidoran ♂ (Male)") {
+										parentNode.textContent = 'Nidoran ♂';
+								}
+								break;
+						case 'img':
+								parentNode.src = data[index][attribute];
+								break;
+						case 'type':
+								parentNode.style.width = "150px";
+								if (data[index][attribute].length > 1) {
+										parentNode.textContent = `${data[index][attribute][0]} - ${data[index][attribute][1]}`;
+								}
+								break;
+				}
+		}
+		fixInfosDetails();
 
 }
 
@@ -75,6 +76,10 @@ const loadCards = (dataset) => {
         setInfosOnCard('.type-pok', i, data["pokemon"], 'type')
         setInfosOnCard('.img-pok', i, data["pokemon"], 'img');
         setCardColor(i);
+        document.querySelectorAll('.container-card')[i].addEventListener("click", () => {
+        clickCard(data["pokemon"][i].name,data["pokemon"][i].num,data["pokemon"][i].type,
+        data["pokemon"][i].img,data["pokemon"][i].height,data["pokemon"][i].weight,data["pokemon"][i].candy,
+        data["pokemon"][i].candy_count,data["pokemon"][i].egg,data["pokemon"][i].spawn_chance)});
     }
     removeCard(dataset.length);
 }
@@ -85,61 +90,139 @@ const removeCard = (index) => document.querySelector('.container-deck').removeCh
 //Chamada
 loadCards(data["pokemon"]);
 
+//Função para recuperar escolha de filtro do usuário
+const getTypeChoosedfunction = () => {
+    const select = document.getElementsByClassName('select')[0];
+    const optionValue = select.options[select.selectedIndex].value;
+    return optionValue;
+};
 
-//Implementando lógica dos filtros
-//Algoritmo para filtar os dados por tipo de pokemon
-//Objetivo: selecionar um tipo de pokemon no botão filtrar e na tela inicial visualizar apenas os pokemons daquiele tipo
 
-
-//Passos: *****CÓDIGO REFATORADO V1 *****
-//PASSO1.Criar uma função para reconhecer o grupo de pokemon escolhido do menu
-const getTypeChoosed = () => "Fire";
-//PASSO2.Recuperar o nome desse grupo
-console.log(getTypeChoosed()) //exemplo: retorna no console
-
-//PASSO3.Implementação do filtro de tipo
-//Refatorar depois pra não repetir as variáveis
-const filterType = (pokemon) => {
-    //recuperando o valor escolhido pelo usuário
-    let optionUser = getTypeChoosed();
-    //criando a lógica de busca
-    if (pokemon.type[0] === optionUser || pokemon.type[1] === optionUser) {
+//Implementação do filtro por tipo
+//Refatorar depois e tirar comments
+const createfilterType = (pokemon) => {
+    console.log(pokemon)
+        //recuperando o valor escolhido pelo usuário
+    let optionUser = getTypeChoosedfunction();
+    console.log(optionUser)
+        //criando a lógica de busca
+    if (pokemon.type[0] !== optionUser && pokemon.type[1] !== optionUser) {
         return pokemon
     }
 };
 
-//
-function applyFilterType(dataset) {
-    console.log(dataset.filter(filterType))
+
+const applyFilterTypeOnCards = () => {
+    let cardList = document.querySelectorAll('.container-card');
+    // console.log(cardList);
+    cardList.forEach(function(card) {
+        card.style.display = "block"
+    });
+    // cardList.map(card => card.style.display = "block");
+    let dataFiltered = data["pokemon"].filter(createfilterType);
+    console.log(dataFiltered);
+
+    //como fazer o array diff?Quero usá-lo para sumir com os cards não selecionados na tela inicial
+    //simulando um array diff qualquer
+    // let [a, b, , , c, d, e, , f, g, h, , i, j] = data["pokemon"];
+    // let dataNotFiltered = [a, b, c, d, e, f, g, h, i, j];
+    // console.log(dataNotFiltered);
+
+
+    // //sumir com cards não selecionados:
+    //1.Pegar os nós html que contém o número dos pokemons
+    let numberNodeList = document.querySelectorAll('.number-pok');
+
+    // //Para cada polemon não selecionado:
+    for (let item of dataFiltered) {
+        //Pegue o número deste pokemon
+        let pokemonNotFilteredNumber = item.num;
+
+        //Para cada container de número de pokemons:
+        for (let item of numberNodeList) {
+            //Verifique se o número do pokemon não selecionado é igual ao número que está inscrito dentro desse container:
+            if (pokemonNotFilteredNumber === item.textContent) {
+                //se sim, apague o seu nó avô (.container-card)
+                item.parentNode.parentNode.style.display = "none"
+            };
+        }
+    };
 };
-applyFilterType(data["pokemon"])
+
+//Função para recuperar escolha de ordenar do usuário
+const getOrderChoosedfunction = () => {
+    const selectOrder = document.getElementsByClassName('select')[1];
+    console.log(selectOrder)
+    const optionOrderValue = selectOrder.options[selectOrder.selectedIndex].value;
+    console.log(optionOrderValue)
+    return optionOrderValue;
+};
 
 
-//Chamando as funções para aplicar o filtro: Ou seja, a função applyFilterType está filtranbdo o banco de dados e usando o retorno da função filterType para passar pra ela qual o tipo a ser buscado no banco
-//ANTES: console.log(applyFilterType());
-//DEPOIS: 
-// console.log(applyFilterType(data["pokemon"]));
+const optionOrder = getOrderChoosedfunction();
+// criar função para ordenar pura passando parametros
 
+//operador ternário 
 
-
-//5.Fazer com que apenas os cards localizados aparecem na tela
-//Depois: 
-// const loadCards = (dataset) => {
-//     for (let i = 0; i < dataset.length; i++) {
-//         ...mesma declaração de antes
-//     }
-//     removeTemplateCard();
+// Ex: Então, a função de comparação tem a seguinte forma:
+// function comparar(a, b) {
+//   if (a < b ) {
+//     return -1;
+//   }
+//   if (a > b) {
+//     return 1;
+//   }
+//   // a deve ser igual a b
+//   return 0;
 // }
-//Chamada: loadCards(data["pokemon"])
-
-//Função para carregar os cards filtrados:
-//Passo1: sumir com o primeiro deck de cards
-//Passo2: fazer os cards de interesse aparecerem no segundo deck
-
-//1.Função para remover todos os cards da tela inicial
 
 
-//6.O usuário deve conseguir voltar pra tela inicial
+
+// //modal
+const modal = document.querySelector('.modal-char');
+
+function openModal() {
+		modal.style.display= "block"
+};
+
+const closeModal = document.querySelector('.close').addEventListener("click", () => {
+		modal.style.display= "none"
+});
+
+window.addEventListener("click", (event) => {
+		if (event.target == modal) {
+				modal.style.display= "none"
+		}
+});
+
+
+function clickCard (name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance) {
+		// const changingInfo = () => {
+		//     if (name === "Nidoran ♀ (Female)") {
+		//         name = "Nidoran ♀";    
+		//     }  else  if (name === "Nidoran ♂ (Male)") {
+		//         name = "Nidoran ♂";
+		//     } else if (type === "type[0],type[1]"){
+		//         type = `${type[0]} - ${type[1]}`;
+		//     } else (candy_count === ""){
+		//         candy_count = 0;
+		//     }
+		// }
+		// changingInfo();
+		console.log(name,num,type,img,height,weight,candy,candy_count,egg,spawn_chance)
+		document.getElementById("char-name").textContent = name
+		document.getElementById("char-num").textContent = num
+		document.getElementById("char-type").textContent = type
+		document.getElementById("char-img").src = img
+		document.getElementById("char-height-value").textContent = height
+		document.getElementById("char-weight-value").textContent = weight
+		document.getElementById("char-cand-value").textContent = candy
+		document.getElementById("char-cand-count-value").textContent = candy_count
+		document.getElementById("Char-egg-value").textContent = egg
+		document.getElementById("char-spawn-chance-value").textContent = spawn_chance
+		openModal();
+		
+}
 
 //Voltar para home page
 const goHomePage = () => window.location.reload()
@@ -148,3 +231,11 @@ const goLaboratoriaPage = () => window.location.href = "https://www.laboratoria.
 //Atribuição de eventos
 document.querySelector('#home').addEventListener('click', goHomePage);
 document.querySelector('#logo-lab').addEventListener('click', goLaboratoriaPage)
+document.getElementsByClassName('select')[0].addEventListener("change", () => {
+    getTypeChoosedfunction();
+    applyFilterTypeOnCards();
+});
+
+document.getElementsByClassName('select')[1].addEventListener("change",() => {
+    getOrderChoosedfunction();
+});
