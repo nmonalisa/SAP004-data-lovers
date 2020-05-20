@@ -15,7 +15,7 @@
 
 .body-config {
     margin: 0px auto;
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
     font-size: 22px;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .btn {
-    background: #FFFFFF;
+    background: #ffffff;
     opacity: 0.5;
     border-radius: 25px;
     color: black;
@@ -63,12 +63,12 @@
 .btn-search:hover,
 .select:hover {
     cursor: pointer;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     opacity: 1;
 }
 
 .container {
-    background-color: #E5E5E5;
+    background-color: #e5e5e5;
     margin: 0px auto;
     padding-bottom: 30px;
     width: 1200px;
@@ -210,9 +210,9 @@
 }
 
 
-/* tela secundária - Modal com características */
-
-.modal-char {
+/* tela secundária - Modal com características *
+  
+  .modal-char {
     display: flex;
     display: none;
     position: fixed;
@@ -225,9 +225,9 @@
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-}
-
-.char-card-container {
+  }
+  
+  .char-card-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -235,40 +235,39 @@
     height: 330px;
     margin: 15% auto;
     font-style: normal;
-    background: #ff8c00 url("./assets/pokeball_half2.png") no-repeat right top;
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    background: black url("./assets/pokeball_half2.png") no-repeat right top;
     justify-content: space-between;
-}
-
-.img-container {
+  }
+  
+  .img-container {
     position: relative;
-}
-
-.char-name-style {
+  }
+  
+  .char-name-style {
     font-size: 22px;
     font-weight: bold;
     margin-top: 10px;
     color: #ffffff;
-}
-
-.char-num-style {
+  }
+  
+  .char-num-style {
     font-size: 12px;
     line-height: 15px;
     font-weight: bold;
     margin-top: 16px;
     color: #ffffff;
-}
-
-.char-img-style {
+  }
+  
+  .char-img-style {
     position: absolute;
     width: 100px;
     height: 100px;
     top: -10px;
     right: -50px;
     z-index: 2;
-}
-
-.char-type-style {
+  }
+  
+  .char-type-style {
     padding: 2.5px 20px;
     font-size: 14px;
     line-height: 16px;
@@ -279,9 +278,9 @@
     background: #ffffff;
     opacity: 0.3;
     text-align: center;
-}
-
-.modal-char-trans {
+  }
+  
+  .modal-char-trans {
     display: flex;
     width: 200px;
     height: 200px;
@@ -296,9 +295,9 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.close {
+  }
+  
+  .close {
     position: relative;
     width: 15px;
     height: 15px;
@@ -306,41 +305,30 @@
     top: 45px;
     z-index: 1;
     cursor: pointer;
-}
-
-.close:hover {
+  }
+  
+  .close:hover {
     background: #ffffff;
     opacity: 0.3;
-}
-
-
-/* .menu-char{
-        margin-bottom: 5%;
-        text-align: center;
-    } */
-
-hr {
-    border: 1.5px solid #e5e5e5;
-}
-
-.modal-flex {
+  }
+  
+  .modal-flex {
     display: flex;
     width: 100%;
     justify-content: space-between;
     padding: 0 5%;
     margin: 0.5% 0;
-}
-
-.char-item {
+  }
+  
+  .char-item {
     text-align: right;
-}
-
-.char-value {
+  }
+  
+  .char-value {
     font-weight: normal;
-}
-
-
-/*  Responsividade  */
+  }
+  
+  /*  Responsividade  */
 
 @media only screen and (max-width: 424px) {
     * {
