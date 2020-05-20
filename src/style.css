@@ -235,8 +235,7 @@
     height: 330px;
     margin: 15% auto;
     font-style: normal;
-    background: #ff8c00 url("./assets/pokeball_half2.png") no-repeat right top;
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+    background: black url("./assets/pokeball_half2.png") no-repeat right top;
     justify-content: space-between;
 }
 
@@ -311,16 +310,6 @@
 .close:hover {
     background: #ffffff;
     opacity: 0.3;
-}
-
-
-/* .menu-char{
-        margin-bottom: 5%;
-        text-align: center;
-    } */
-
-hr {
-    border: 1.5px solid #e5e5e5;
 }
 
 .modal-flex {

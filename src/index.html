@@ -13,23 +13,22 @@
         <!--cabeçalho da pagina-->
         <header class="header">
             <div class="inner-header">
-
                 <!-- logotipo -->
                 <figure id="home" class="logo-align">
-                    <img class="home" src="/assets/home.png">
-                    <img class="logo-item2" src="/assets/pokeball2.png">
-                    <img class="logo-item1" src="/assets/pokemon-logo.png">
+                    <img class="home" src="./assets/home.png">
+                    <img class="logo-item2" src="./assets/pokeball2.png">
+                    <img class="logo-item1" src="./assets/pokemon-logo.png">
                 </figure>
-
                 <!-- botões -->
                 <div class="flex">
-                    <img class="menu-icon" src="./assets/menu.png">
+                    <img class="menu-icon" src="../assets/menu.png">
                     <!-- Filter -->
                     <form class="flex btn btn-menu btn-filter">
-                        <img class="img-btn-filter" src="/assets/filter.png">
+                        <img class="img-btn-filter" src="./assets/filter.png">
                         <select class="select font-22">
                             <option class="type-option" value="">Filtrar</option>
                             <option class="type-option" value="Bug">Bug</option>
+                            <option class="type-option" value="Dragon">Dragon</option>
                              <option class="type-option" value="Electric">Electric</option>
                             <option class="type-option" value="Fighting">Fighting</option>
                             <option class="type-option" value="Fire">Fire</option>
@@ -48,7 +47,7 @@
                     </form>
                     <!-- order -->
                     <form class="flex btn btn-menu btn-order">
-                        <img class="img-btn-order" src="/assets/order.png">
+                        <img class="img-btn-order" src="./assets/order.png">
                         <select place class="select font-22">
                             <option class="type-option" value="filter">Ordenar</option>
                             <option value="Menor-nº">Menor nº</option>
@@ -62,14 +61,10 @@
     </div>
     </header>
     <!--//fim cabeçalho-->
-
-
     <!-- Container principal-->
     <div class="container">
         <!-- tela de cards-->
         <main class="container-deck">
-
-
             <!--template do card-->
             <section class="container-card">
                 <header>
@@ -82,7 +77,6 @@
                 </aside>
                 <figure>
                     <img class="img-pok">
-
                 </figure>
             </section>
             <!-- //fim template do card-->
@@ -100,22 +94,10 @@
                     </div>
                     <figure class="img-container"><img id="char-img" class="char-img-style "></figure>
                     <div class=b tn-close-modal>
-                        <figure><img class="close" src="../assets/icon.png " /></figure>
+                        <figure><img class="close" src=".../assets/icon.png " /></figure>
                     </div>
                     <section class="sections">
                         <section id="data-container" class="modal-char-trans modal-data">
-                            <!-- <div class= "menu-char border"> 
-                                <label for="rd-data" class= "item-menu-char data">Dados</label>
-                                
-                                <label for="rd-weak" class= "item-menu-char weaknesses">Fraqueza</label>
-                                <label for="rd-evo" class= "item-menu-char evolution">Evolução</label>
-                                <hr/>
-                            </div> -->
-                            <!-- <div classs=" scroll "> 
-                                <input type= "radio" name= "group" id= "rd-data" Checked= "true">
-                                <input type= "radio" name= "group" id= "rd-weak">
-                                <input type= "radio" name= "group" id= "rd-evo">
-                            </div> -->
                             <div class="modal-flex">
                                 <div id="char-height" class="char-height">Altura</div>
                                 <div id="char-height-value" class="char-value char-height-value"></div>
@@ -142,44 +124,19 @@
                             </div>
                         </section>
                     </section>
-                    <!-- <section id= "weak-container" class= "modal-char-trans-1 "> 
-                        <div id= "char-weak-1"></div>
-                        <div id= "char-weak-icon-1"></div>
-                        <div id= "char-weak-2"></div>
-                        <div id= "char-weak-icon-2"></div>
-                        <div id= "char-weak-3"></div>
-                        <div id= "char-weak-icon-3"></div>
-                        <div id= "char-weak-4"></div>
-                        <div id= "char-weak-icon-4"></div>
-                        <div id= "char-weak-5"></div>
-                        <div id= "char-weak-icon-5"></div>
-                        <div id= "char-weak-6"></div>
-                        <div id= "char-weak-icon-6"></div>
-                    </section>
-                    <section id= "evo-container" class= "modal-char-trans-2"> 
-                        <figure><img class= "img-evo evo-1-img" src=" "></img></figure>
-                        <div id= "evo-1-name evo-position-name evo-name-num-box1"></div>
-                        <div id= "evo-1-num evo-position-num evo-name-num-box1"></div>
-                        
-                        <figure><img class= "arrow"src="../assets/up-chevron.png"></figure>
-                        <div class= "char-evolution-2">
-                        <figure><img class= "img-evo evo-2-img" src=" "></img></figure>
-                        <div id= "evo-2-name evo-position-name evo-name-num-box2"></div>
-                        <div id= "evo-2-num evo-position-num evo-name-num-box2"></div>
-                    </section> -->
-                    </sections>
                 </section>
+            </section>
         </main>
         <!--//fim tela de cards-->
     </div>
     <!-- //fim container-->
 
-    <footer class="footer-page color-noturno">
-        <img id="logo-lab" src="/assets/laboratoria_logo.png">
+    <footer class="footer-page>
+        <img id=" logo-lab " src="./assets/laboratoria_logo.png ">
         <span> Laboratoria - SAP004 | São Paulo, 2020</span>
     </footer>
     </div>
-    <script src="main.js" type="module"></script>
+    <script src="main.js " type="module "></script>
 </body>
 
 </html>
