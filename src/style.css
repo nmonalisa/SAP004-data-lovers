@@ -91,14 +91,14 @@
 }
 
 .container-deck {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-shrink: 1;
-    position: absolute;
-    top: 100px;
-    left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  flex-shrink: 1;
+  position: absolute;
+  top: 100px;
+  left: 10px;
 }
 
 .flex {
@@ -120,15 +120,15 @@
 }
 
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2;
-    padding: 10px 50px;
-    height: 70px;
-    margin-bottom: 30px;
-    background: rgba(40, 169, 146, 0.94);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding: 10px 50px;
+  height: 70px;
+  margin-bottom: 30px;
+  background: rgba(40, 169, 146, 0.94);
 }
 
 .in-block {
@@ -188,18 +188,18 @@
 }
 
 .footer-page {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    color: white;
-    background-color: black;
-    padding: 5px;
-    z-index: 2;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+  z-index: 2;
 }
 
 .footer-page img {
@@ -208,6 +208,7 @@
   border-radius: 4px;
   margin-right: 8px;
 }
+
 
 /* tela secundária - Modal com características */
 
@@ -227,17 +228,6 @@
 }
 
 .char-card-container {
-<<<<<<< HEAD
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 210px;
-    height: 330px;
-    margin: 15% auto;
-    font-style: normal;
-    background: black url("./assets/pokeball_half2.png") no-repeat right top;
-    justify-content: space-between;
-=======
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,7 +237,6 @@
   font-style: normal;
   background: black url("./assets/pokeball_half2.png") no-repeat right top;
   justify-content: space-between;
->>>>>>> 63e294d853ebc816735b5d0d93717422a01b8fff
 }
 
 .img-container {
@@ -319,13 +308,8 @@
 }
 
 .close:hover {
-<<<<<<< HEAD
-    background: #ffffff;
-    opacity: 0.3;
-=======
   background: #ffffff;
   opacity: 0.3;
->>>>>>> 63e294d853ebc816735b5d0d93717422a01b8fff
 }
 
 .modal-flex {
@@ -344,133 +328,133 @@
   font-weight: normal;
 }
 
+
 /*  Responsividade  */
 
 @media only screen and (max-width: 424px) {
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-    .logo-align {
-        position: absolute;
-        left: 0px;
-        margin: 5px;
-    }
-    .header {
-        height: 90px;
-    }
-    .inner-header>.flex .btn {
-        position: absolute;
-        right: -140px;
-        height: 40px;
-        padding: 5px;
-        opacity: 1;
-        border: 1px solid gray;
-        transform: all 0.5s;
-        border-radius: 20px 0px 0px 20px;
-    }
-    .container {
-        margin-top: 50px;
-        max-width: 320px;
-    }
-    .container-card {
-        margin: 3px auto;
-    }
-    .btn-filter {
-        background-color: tomato;
-        top: 5px;
-    }
-    .btn-order {
-        background-color: yellow;
-        top: 45px;
-    }
-    .inner-header .btn:hover {
-        width: 150px;
-        right: 0px;
-    }
-    .btn-filter:hover {
-        background-color: tomato;
-    }
-    .btn-order:hover {
-        background-color: yellow;
-    }
-    .select:hover {
-        background-color: transparent;
-    }
-    .img-btn-order {
-        width: 30px;
-        height: 25px;
-        margin-left: 20px;
-    }
-    .img-btn-filter {
-        width: 45px;
-        height: 40px;
-        margin-left: 10px;
-    }
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .logo-align {
+    position: absolute;
+    left: 0px;
+    margin: 5px;
+  }
+  .header {
+    height: 90px;
+  }
+  .inner-header>.flex .btn {
+    position: absolute;
+    right: -140px;
+    height: 40px;
+    padding: 5px;
+    opacity: 1;
+    border: 1px solid gray;
+    transform: all 0.5s;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .container {
+    margin-top: 50px;
+    max-width: 320px;
+  }
+  .container-card {
+    margin: 3px auto;
+  }
+  .btn-filter {
+    background-color: tomato;
+    top: 5px;
+  }
+  .btn-order {
+    background-color: yellow;
+    top: 45px;
+  }
+  .inner-header .btn:hover {
+    width: 150px;
+    right: 0px;
+  }
+  .btn-filter:hover {
+    background-color: tomato;
+  }
+  .btn-order:hover {
+    background-color: yellow;
+  }
+  .select:hover {
+    background-color: transparent;
+  }
+  .img-btn-order {
+    width: 30px;
+    height: 25px;
+    margin-left: 20px;
+  }
+  .img-btn-filter {
+    width: 45px;
+    height: 40px;
+    margin-left: 10px;
+  }
 }
 
 @media only screen and (min-width: 425px) and (max-width: 760px) {
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-    .logo-align {
-        position: absolute;
-        left: 0px;
-        margin: 5px;
-    }
-    .header {
-        height: 90px;
-    }
-    .inner-header>.flex .btn {
-        position: absolute;
-        right: -140px;
-        height: 40px;
-        padding: 5px;
-        opacity: 1;
-        border: 1px solid gray;
-        transform: all 0.5s;
-        border-radius: 20px 0px 0px 20px;
-    }
-    .container {
-        margin-top: 50px;
-        max-width: 320px;
-    }
-    .container-card {
-        margin: 3px auto;
-    }
-    .btn-filter {
-        background-color: tomato;
-        top: 5px;
-    }
-    .btn-order {
-        background-color: yellow;
-        top: 45px;
-    }
-    .inner-header .btn:hover {
-        width: 150px;
-        right: 0px;
-    }
-    .btn-filter:hover {
-        background-color: tomato;
-    }
-    .btn-order:hover {
-        background-color: yellow;
-    }
-    .select:hover {
-        background-color: transparent;
-    }
-    .img-btn-order {
-        width: 30px;
-        height: 25px;
-        margin-left: 20px;
-    }
-    .img-btn-filter {
-        width: 45px;
-        height: 40px;
-        margin-left: 10px;
-    }
-
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
+  .logo-align {
+    position: absolute;
+    left: 0px;
+    margin: 5px;
+  }
+  .header {
+    height: 90px;
+  }
+  .inner-header>.flex .btn {
+    position: absolute;
+    right: -140px;
+    height: 40px;
+    padding: 5px;
+    opacity: 1;
+    border: 1px solid gray;
+    transform: all 0.5s;
+    border-radius: 20px 0px 0px 20px;
+  }
+  .container {
+    margin-top: 50px;
+    max-width: 320px;
+  }
+  .container-card {
+    margin: 3px auto;
+  }
+  .btn-filter {
+    background-color: tomato;
+    top: 5px;
+  }
+  .btn-order {
+    background-color: yellow;
+    top: 45px;
+  }
+  .inner-header .btn:hover {
+    width: 150px;
+    right: 0px;
+  }
+  .btn-filter:hover {
+    background-color: tomato;
+  }
+  .btn-order:hover {
+    background-color: yellow;
+  }
+  .select:hover {
+    background-color: transparent;
+  }
+  .img-btn-order {
+    width: 30px;
+    height: 25px;
+    margin-left: 20px;
+  }
+  .img-btn-filter {
+    width: 45px;
+    height: 40px;
+    margin-left: 10px;
+  }
 }
 
 @media only screen and (min-width: 761px) and (max-width: 1024px) {
