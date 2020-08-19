@@ -1,14 +1,10 @@
-import { example } from './data.js';
+import { filterData, sortData } from "./data.js";
 import data from './data/pokemon/pokemon.js';
-import pokemon from './data/pokemon/pokemon.js';
-console.log(data)
-
-
 
 //Variáveis globais: configuração
 const colorTypeList = {
     Bug: "#1E6DE3",
-    Dragon: "#FF6347"
+    Dragon: "#FF6347",
     Electric: "#D7DB1E",
     Fighting: "#FEC807",
     Fire: "#FF8C00",
