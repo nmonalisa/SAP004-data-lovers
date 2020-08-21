@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>Data Lovers</title>
     <meta id="viewport" name="viewport" content="width=device-width, user-scalable=no" />
     <link rel="stylesheet" href="style.css" />
-</head>
+  </head>
 
-<body class="body-config">
+  <body class="body-config">
     <div id="root">
 
-        <!--cabeçalho da pagina-->
-        <header class="header">
-            <div class="inner-header">
-                <!-- logotipo -->
-                <figure id="home" class="logo-align">
-                    <img class="home" src="./assets/home.png" />
-                    <img class="logo-item2" src="./assets/pokeball2.png" />
-                    <img class="logo-item1" src="./assets/pokemon-logo.png" />
-                </figure>
-                <!-- botões -->
-                <div class="flex">
-                    <img class="menu-icon" src="./assets/menu.png" />
-                    <!-- Filter -->
-                    <form class="flex btn btn-menu btn-filter">
-                        <img class="img-btn-filter" src="./assets/filter.png" />
-                        <select class="select font-22">
+      <!--cabeçalho da pagina-->
+      <header class="header">
+        <div class="inner-header">
+          <!-- logotipo -->
+          <figure id="home" class="logo-align">
+            <img class="home" src="./assets/home.png" />
+            <img class="logo-item2" src="./assets/pokeball2.png" />
+            <img class="logo-item1" src="./assets/pokemon-logo.png" />
+          </figure>
+          <!-- botões -->
+          <div class="flex">
+            <img class="menu-icon" src="./assets/menu.png" />
+            <!-- Filter -->
+            <form class="flex btn btn-menu btn-filter">
+              <img class="img-btn-filter" src="./assets/filter.png" />
+              <select class="select font-22">
                 <option class="type-option" value="">Filtrar</option>
                 <option class="type-option" value="Bug">Bug</option>
                 <option class="type-option" value="Dragon">Dragon</option>
@@ -44,100 +44,100 @@
                 <option class="type-option" value="Rock">Rock</option>
                 <option class="type-option" value="Water">Water </option>
               </select>
-                    </form>
-                    <!-- order -->
-                    <form class="flex btn btn-menu btn-order">
-                        <img class="img-btn-order" src="./assets/order.png" />
-                        <select place class="select font-22">
+            </form>
+            <!-- order -->
+            <form class="flex btn btn-menu btn-order">
+              <img class="img-btn-order" src="./assets/order.png" />
+              <select place class="select font-22">
                 <option class="type-option" value="filter">Ordenar</option>
                 <option value="Menor-nº">Menor nº</option>
                 <option value="Maior-nº">Maior nº</option>
                 <option value="A-Z">A - Z</option>
                 <option value="Z-A">Z - A</option>
               </select>
-                    </form>
-                </div>
-            </div>
-        </header>
-        <!--//fim cabeçalho-->
-        <!-- Container principal-->
-        <div class="container">
-            <!-- tela de cards-->
-            <main class="container-deck">
-                <!--template do card-->
-                <section class="container-card">
-                    <header>
-                        <h4 class="name-pok in-block name-pok-spacing">Nome</h4>
-                        <div class="number-pok bold">#000</div>
-                    </header>
-                    <aside class="flex-pok-type flex">
-                        <div class="type-pok btn btn-card bold">Tipo</div>
-                    </aside>
-                    <figure>
-                        <img class="img-pok" />
-                    </figure>
-                </section>
-                <!-- //fim template do card-->
-                <!--tela secundaria-->
-                <section class="modal-char">
-                    <!--class= " modal-char"-->
-                    <section class="char-card-container">
-                        <!--menu-characters-item-->
-                        <div class="modal-flex">
-                            <div>
-                                <div id="char-name" class="char-name-style"></div>
-                                <div id="char-type" class="char-type-style"></div>
-                            </div>
-                            <div id="char-num" class="char-num-style"></div>
-                        </div>
-                        <figure class="img-container">
-                            <img id="char-img" class="char-img-style" />
-                        </figure>
-                        <div class="btn-close-modal">
-                            <figure><img class="close" src=".../assets/icon.png " /></figure>
-                        </div>
-                        <section class="sections">
-                            <section id="data-container" class="modal-char-trans">
-                                <div class="modal-flex">
-                                    <div id="char-height">Altura</div>
-                                    <div id="char-height-value" class="char-value"></div>
-                                </div>
-                                <div class="modal-flex">
-                                    <div id="char-weight">Peso</div>
-                                    <div id="char-weight-value" class="char-value"></div>
-                                </div>
-                                <div class="modal-flex">
-                                    <div id="char-cand">Doce</div>
-                                    <div id="char-cand-value" class="char-value"></div>
-                                </div>
-                                <div class="modal-flex">
-                                    <div id="char-cand-count">Nº Doces</div>
-                                    <div id="char-cand-count-value" class="char-value"></div>
-                                </div>
-                                <div class="modal-flex">
-                                    <div id="Char-egg">Ovo</div>
-                                    <div id="Char-egg-value" class="char-item char-value"></div>
-                                </div>
-                                <div class="modal-flex">
-                                    <div id="char-spawn-chance">Chance de Captura</div>
-                                    <div id="char-spawn-chance-value" class="char-value"></div>
-                                </div>
-                            </section>
-                        </section>
-                    </section>
-                </section>
-            </main>
-            <!--//fim tela de cards-->
-
+            </form>
+          </div>
         </div>
-        <!-- //fim container-->
+      </header>
+      <!--//fim cabeçalho-->
+      <!-- Container principal-->
+      <div class="container">
+        <!-- tela de cards-->
+        <main class="container-deck">
+          <!--template do card-->
+          <section class="container-card">
+            <header>
+              <h4 class="name-pok in-block name-pok-spacing">Nome</h4>
+              <div class="number-pok bold">#000</div>
+            </header>
+            <aside class="flex-pok-type flex">
+              <div class="type-pok btn btn-card bold">Tipo</div>
+            </aside>
+            <figure>
+              <img class="img-pok" />
+            </figure>
+          </section>
+          <!-- //fim template do card-->
+          <!--tela secundaria-->
+          <section class="modal-char">
+            <!--class= " modal-char"-->
+            <section class="char-card-container">
+              <!--menu-characters-item-->
+              <div class="modal-flex">
+                <div>
+                  <div id="char-name" class="char-name-style"></div>
+                  <div id="char-type" class="char-type-style"></div>
+                </div>
+                <div id="char-num" class="char-num-style"></div>
+              </div>
+              <figure class="img-container">
+                <img id="char-img" class="char-img-style" />
+              </figure>
+              <div class="btn-close-modal">
+                <figure><img class="close" src=".../assets/icon.png " /></figure>
+              </div>
+              <section class="sections">
+                <section id="data-container" class="modal-char-trans">
+                  <div class="modal-flex">
+                    <div id="char-height">Altura</div>
+                    <div id="char-height-value" class="char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="char-weight">Peso</div>
+                    <div id="char-weight-value" class="char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="char-cand">Doce</div>
+                    <div id="char-cand-value" class="char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="char-cand-count">Nº Doces</div>
+                    <div id="char-cand-count-value" class="char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="Char-egg">Ovo</div>
+                    <div id="Char-egg-value" class="char-item char-value"></div>
+                  </div>
+                  <div class="modal-flex">
+                    <div id="char-spawn-chance">Chance de Captura</div>
+                    <div id="char-spawn-chance-value" class="char-value"></div>
+                  </div>
+                </section>
+              </section>
+            </section>
+          </section>
+        </main>
+        <!--//fim tela de cards-->
 
-        <footer class="footer-page">
-            <img id="logo-lab" src="./assets/laboratoria_logo.png">
-            <span> Laboratoria - SAP004 | São Paulo, 2020</span>
-        </footer>
+      </div>
+      <!-- //fim container-->
+
+      <footer class="footer-page">
+        <img id="logo-lab" src="./assets/laboratoria_logo.png">
+        <span> Laboratoria - SAP004 | São Paulo, 2020</span>
+      </footer>
     </div>
     <script src="main.js" type="module"></script>
-</body>
+  </body>
 
 </html>
