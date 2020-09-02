@@ -1,7 +1,6 @@
 import { filterData, sortData } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
-//Variáveis globais: configuração
 const colorTypeList = {
   Bug: "#1E6DE3",
   Dragon: "#ff6347",
@@ -23,10 +22,12 @@ const colorTypeList = {
 
 // ---------------- Estruturação dos cards ------------------------//
 
-const cloneCards = () =>
+const cloneCards = () => {
   document
-  .querySelector(".container-deck")
-  .appendChild(document.querySelector(".container-card").cloneNode(true));
+    .querySelector(".container-deck")
+    .appendChild(document.querySelector(".container-card").cloneNode(true));
+}
+
 
 const setInfosOnCard = (node, index, data, attribute) => {
   let parentNode = document.querySelectorAll(node)[index];
@@ -57,11 +58,11 @@ const setInfosOnCard = (node, index, data, attribute) => {
   fixInfosDetails();
 };
 
-const setCardColor = (index) =>
+const setCardColor = (index) => {
   (document.querySelectorAll(".container-card")[index].style.backgroundColor =
     colorTypeList[data["pokemon"][index]["type"][0]]);
+}
 
-//Função para carregar cards com as informações dos pokemons
 const loadCards = (dataset) => {
   for (let i = 0; i < dataset.length; i++) {
     cloneCards();
@@ -91,7 +92,13 @@ const loadCards = (dataset) => {
 };
 loadCards(data["pokemon"]);
 
-//Configurações do modal (card estendido)
+
+
+
+
+//-------------- MODAL/CARD ESTENDIDO ------------------//
+const modal = document.querySelector(".modal-char");
+
 function clickCard(name, num, type, img, height, weight, candy, candy_count, egg, spawn_chance) {
   const changingInfo = () => {
     switch (name) {
@@ -127,28 +134,31 @@ function clickCard(name, num, type, img, height, weight, candy, candy_count, egg
   document.getElementById("char-cand-count-value").textContent = candy_count;
   document.getElementById("Char-egg-value").textContent = egg;
   document.getElementById("char-spawn-chance-value").textContent = spawn_chance;
-  //Abrir modal
   openModal();
 }
 
-const modal = document.querySelector(".modal-char");
 
+//Abrir modal
 function openModal() {
   modal.style.display = "block";
 }
 
+//Fechar modal
 document.querySelector(".close").addEventListener("click", () => {
   modal.style.display = "none";
 });
 
+//Fechar modeal ??
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
     modal.style.display = "none";
   }
 });
 
-// ----------- Filtragem e Ordenação de dados -------------//
 
+
+
+// ----------- Filtragem e Ordenação de dados -------------//
 //Recuperação da escolha dos usuários
 function getUserOption(SelectIndex) {
   const select = document.getElementsByClassName("select")[SelectIndex];
@@ -172,7 +182,6 @@ const filterType = () => {
     }
   }
 };
-
 
 //Ordenação:
 const orderData = (sortBy) => {
