@@ -1,26 +1,7 @@
 import { sortData } from "./sort.js";
 import { filterData } from "./filter.js";
+import { colorTypeList } from './colorGuide.js'
 import data from "./database/pokemon/pokemon.js";
-
-const colorTypeList = {
-  Bug: "#1E6DE3",
-  Dragon: "#ff6347",
-  Electric: "#D7DB1E",
-  Fighting: "#FEC807",
-  Fire: "#FF8C00",
-  Flying: "#0E8AA5",
-  Ghost: "#F6D7F6",
-  Grass: "#59B539",
-  Ground: "#976B36",
-  Ice: "#DBDDDD",
-  Normal: "#DE2626",
-  Poison: "#9D9F25",
-  Psychic: "#D91CD1",
-  Rock: "#484848",
-  Steel: "#DAA520",
-  Water: "#87CEEB",
-};
-
 
 //Estruturação dos cards
 const startApp = () => {
@@ -28,19 +9,16 @@ const startApp = () => {
   removeTemplateCard(data.pokemon)
 }
 
-
 const cloneCard = () => {
   const deckCards = document.querySelector(".container-deck");
   const card = document.querySelector(".container-card");
   deckCards.appendChild(card.cloneNode(true));
 }
 
-
 const setInfosOnCard = (node, index, attribute) => {
   const parentNode = document.querySelectorAll(node)[index];
   parentNode.textContent = data.pokemon[index][attribute];
 };
-
 
 const setCardColor = (index) => {
   const card = document.querySelectorAll(".container-card")
@@ -137,6 +115,18 @@ const openModal = () => {
   modal.style.display = "block";
 }
 
+window.addEventListener("click", (event) => {
+  const modal = document.querySelector(".modal-char");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+document.querySelector(".close").addEventListener("click", () => {
+  const modal = document.querySelector(".modal-char");
+  modal.style.display = "none";
+});
+
 
 //Filtrar Dados
 function getUserOption(SelectIndex) {
@@ -144,7 +134,6 @@ function getUserOption(SelectIndex) {
   const optionValue = select.options[select.selectedIndex].value;
   return optionValue;
 }
-
 
 const cleanEarlierFilter = () => {
   let cardList = document.querySelectorAll(".container-card");
@@ -180,31 +169,16 @@ const orderData = (sortBy) => {
   loadCards(pokemonOrded);
 };
 
-
 //Voltar para home page
 const goHomePage = () => window.location.reload();
 const goLaboratoriaPage = () =>
   (window.location.href = "https://www.laboratoria.la/");
 
 //Atribuição de eventos
-document.querySelector(".close").addEventListener("click", () => {
-  const modal = document.querySelector(".modal-char");
-  modal.style.display = "none";
-});
-
-window.addEventListener("click", (event) => {
-  const modal = document.querySelector(".modal-char");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
-
 document.querySelector("#home").addEventListener("click", goHomePage);
 document
   .querySelector("#logo-lab")
   .addEventListener("click", goLaboratoriaPage);
-
-
 
 const optionOrderUser = document.getElementsByClassName("select")[1];
 optionOrderUser.addEventListener("change", () => {
