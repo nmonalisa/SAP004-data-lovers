@@ -1,4 +1,5 @@
-import { filterData, sortData } from "./FilteAndOrderFunctions.js";
+import { sortData } from "./sort.js";
+import { filterData } from "./filter.js";
 import data from "./database/pokemon/pokemon.js";
 
 const colorTypeList = {
@@ -137,24 +138,23 @@ const openModal = () => {
 }
 
 
-//Filtragem e Ordenação de dados
+//Filtrar Dados
 function getUserOption(SelectIndex) {
   const select = document.getElementsByClassName("select")[SelectIndex];
   const optionValue = select.options[select.selectedIndex].value;
   return optionValue;
 }
 
-const cleanEarlierOrdenation = () => {
+
+const cleanEarlierFilter = () => {
   let cardList = document.querySelectorAll(".container-card");
-  cardList.forEach((card) => (card.style.display = "block"));
+  cardList.forEach(card => card.style.display = "block");
 }
 
 const filterType = () => {
-  cleanEarlierOrdenation()
+  cleanEarlierFilter()
   const condition = getUserOption(0);
-
-
-  const pokemonFiltered = filterData(data["pokemon"], condition);
+  const pokemonFiltered = filterData(data.pokemon, condition);
   let numberNodeList = document.querySelectorAll(".number-pok");
   for (let item of pokemonFiltered) {
     let pokemonNotFilteredNumber = item.num;
@@ -166,9 +166,17 @@ const filterType = () => {
   }
 };
 
+const optionTyperUser = document.getElementsByClassName("select")[0];
+optionTyperUser.addEventListener("change", () => {
+  getUserOption(0);
+  filterType();
+});
+
+
+//Ordenar Dados
 const orderData = (sortBy) => {
   const sortOrder = getUserOption(1);
-  const pokemonOrded = sortData(data["pokemon"], sortBy, sortOrder);
+  const pokemonOrded = sortData(data.pokemon, sortBy, sortOrder);
   loadCards(pokemonOrded);
 };
 
@@ -196,11 +204,7 @@ document
   .querySelector("#logo-lab")
   .addEventListener("click", goLaboratoriaPage);
 
-const optionTyperUser = document.getElementsByClassName("select")[0];
-optionTyperUser.addEventListener("change", () => {
-  getUserOption(0);
-  filterType();
-});
+
 
 const optionOrderUser = document.getElementsByClassName("select")[1];
 optionOrderUser.addEventListener("change", () => {
