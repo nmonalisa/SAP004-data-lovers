@@ -20,8 +20,7 @@ const colorTypeList = {
   Water: "#87CEEB",
 };
 
-// ---------------- Estruturação dos cards ------------------------//
-
+//Estruturação dos cards
 const cloneCards = () => {
   document
     .querySelector(".container-deck")
@@ -93,10 +92,7 @@ const loadCards = (dataset) => {
 loadCards(data["pokemon"]);
 
 
-
-
-
-//-------------- MODAL/CARD ESTENDIDO ------------------//
+//Modal - Card estendido
 const modal = document.querySelector(".modal-char");
 
 function clickCard(name, num, type, img, height, weight, candy, candy_count, egg, spawn_chance) {
@@ -137,36 +133,27 @@ function clickCard(name, num, type, img, height, weight, candy, candy_count, egg
   openModal();
 }
 
-
-//Abrir modal
 function openModal() {
   modal.style.display = "block";
 }
 
-//Fechar modal
 document.querySelector(".close").addEventListener("click", () => {
   modal.style.display = "none";
 });
 
-//Fechar modeal ??
 window.addEventListener("click", (event) => {
   if (event.target === modal) {
     modal.style.display = "none";
   }
 });
 
-
-
-
-// ----------- Filtragem e Ordenação de dados -------------//
-//Recuperação da escolha dos usuários
+//Filtragem e Ordenação de dados
 function getUserOption(SelectIndex) {
   const select = document.getElementsByClassName("select")[SelectIndex];
   const optionValue = select.options[select.selectedIndex].value;
   return optionValue;
 }
 
-//Filtro:
 const filterType = () => {
   const condition = getUserOption(0);
   let cardList = document.querySelectorAll(".container-card");
@@ -183,7 +170,6 @@ const filterType = () => {
   }
 };
 
-//Ordenação:
 const orderData = (sortBy) => {
   const sortOrder = getUserOption(1);
   const pokemonOrded = sortData(data["pokemon"], sortBy, sortOrder);
