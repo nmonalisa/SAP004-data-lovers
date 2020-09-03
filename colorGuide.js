@@ -1,0 +1,18 @@
+export const colorTypeList = {
+  Bug: "#1E6DE3",
+  Dragon: "#ff6347",
+  Electric: "#D7DB1E",
+  Fighting: "#FEC807",
+  Fire: "#FF8C00",
+  Flying: "#0E8AA5",
+  Ghost: "#F6D7F6",
+  Grass: "#59B539",
+  Ground: "#976B36",
+  Ice: "#DBDDDD",
+  Normal: "#DE2626",
+  Poison: "#9D9F25",
+  Psychic: "#D91CD1",
+  Rock: "#484848",
+  Steel: "#DAA520",
+  Water: "#87CEEB",
+};
